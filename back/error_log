@@ -1,0 +1,8 @@
+[08-May-2017 16:30:19 UTC] PHP Notice:  Undefined index: nombre in /home/bosyk2017/public_html/totalcareautorepair.com/back/valida.php on line 47
+[08-May-2017 16:36:03 UTC] PHP Notice:  Array to string conversion in /home/bosyk2017/public_html/totalcareautorepair.com/back/valida.php on line 29
+[08-May-2017 17:10:04 UTC] PHP Parse error:  syntax error, unexpected ''message'' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in /home/bosyk2017/public_html/totalcareautorepair.com/back/valida.php on line 19
+[08-May-2017 17:10:51 UTC] PHP Parse error:  syntax error, unexpected ''message'' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in /home/bosyk2017/public_html/totalcareautorepair.com/back/valida.php on line 19
+[08-May-2017 17:55:25 UTC] PHP Notice:  Undefined index: email in /home/bosyk2017/public_html/totalcareautorepair.com/back/valida_1.php on line 49
+[08-May-2017 18:01:09 UTC] PHP Notice:  Undefined index: email in /home/bosyk2017/public_html/totalcareautorepair.com/back/valida_1.php on line 49
+[08-May-2017 21:27:01 UTC] PHP Notice:  Undefined index: email in /home/bosyk2017/public_html/totalcareautorepair.com/back/valida_1.php on line 49
+[08-May-2017 21:27:06 UTC] PHP Notice:  Undefined index: email in /home/bosyk2017/public_html/totalcareautorepair.com/back/valida_1.php on line 49

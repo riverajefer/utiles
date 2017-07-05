@@ -76,6 +76,13 @@ body {
 }
 
 
+.alert button{
+    margin-right: 36px;
+    background-color: #fff;
+    border: none;
+    padding: 0px 6px;
+}
+
 /*
  * Remove text-shadow in selection highlight: h5bp.com/i
  * These selection rule sets have to be separate.
@@ -104,6 +111,13 @@ hr {
     border-top: 1px solid #ccc;
     margin: 1em 0;
     padding: 0;
+}
+
+.btn{
+    background-color: #fff;
+    border: none;
+    padding: 2px 14px;
+    color: #585858;
 }
 
 

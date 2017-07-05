@@ -10,24 +10,22 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>TUS KIDS</title>
-    <meta name="description" content="Learn how to make your parallax scrolling website resonsive by following this tutorial. We will turn parallax effect off for mobile devices.">
+    <meta name="description" content="Útiles escolares">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-
-    <link rel="author" href="https://plus.google.com/u/0/109859280204979591787/about" />
-
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/alert.css">
+    
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
     <script src="js/vendor/modernizr-2.7.1.min.js"></script>
 </head>
 
 <body class="loading">
     <!--[if lt IE 7]>
-            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
-        <![endif]-->
+        <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+    <![endif]-->
 
     <div id="preload">
         <img src="img/1.jpg">
@@ -132,30 +130,47 @@
                         <img src="img/arriba.png" alt="abajo" width="85px" class="flecha fecha_top">
                     </a>
                     <h2>CONTACTO</h2>
-                    <form class="form-horizontal">
+                    <form class="form-horizontal" id="form-enviar">
                         <div class="form-group">
                             <label for="nombre" class="col-sm-2 col-xs-3 control-label">NOMBRE</label>
                             <div class="col-sm-10 col-xs-8">
-                                <input type="text" class="form-control" id="nombre" placeholder="Nombre" required>
+                                <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Nombre" required>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="email" class="col-sm-2 col-xs-3 control-label">E-MAIL</label>
                             <div class="col-sm-10 col-xs-8">
-                                <input type="email" class="form-control" id="email" placeholder="E-mail" required>
+                                <input type="email" class="form-control" name="email" id="email" placeholder="E-mail" required>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="msg" class="col-sm-2 col-xs-3 control-label">MENSAJE</label>
                             <div class="col-sm-10 col-xs-8">
-                                <textarea rows="2" class="form-control" id="msg" placeholder="Mensaje"></textarea>
+                                <textarea rows="2" class="form-control" name="mensaje" id="msg" placeholder="Mensaje"></textarea>
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="col-sm-offset-2 col-xs-offset-3 col-sm-10 col-xs-9">
-                                <button type="submit" class="btn btn-default">ENVIAR</button>
+                                <button type="submit" id="enviar_btn" class="btn btn-default">ENVIAR</button>
                             </div>
                         </div>
+
+                        <div id="enviando" align="center">
+                            <img src="img/load.gif" alt="Load">
+                            <p style="color:#fff">Envíando</p>
+                        </div>
+
+                        <div class="alert alert-success alert-dismissible" role="alert" id="enviado_ok">
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <strong>Ok!</strong> Mensaje envíado correctamente.
+                        </div>
+
+                        <div class="alert alert-danger alert-dismissible" role="alert" id="alert_error">
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <strong>Error!</strong> <span id="msg_error"></span>
+                        </div>  
+
+
                     </form>
                     <a href="#ubicacion">
                         <img src="img/abajo.png" alt="abajo" width="85px" class="flecha">
@@ -191,6 +206,8 @@
     <script src="js/imagesloaded.js"></script>
     <script src="js/enquire.min.js"></script>
     <script src="js/skrollr.js"></script>
+    <script src="js/alert.js"></script>
+    
     <!-- <script src="js/main.js"></script> -->
     <script>
 (function($) {
@@ -268,9 +285,48 @@
     enquire.register("screen and (min-width : 768px)", initAdjustWindow(), false)
         .listen(100);
 
-})(jQuery);        
+})(jQuery); 
+
+/*********** Envío formulario ****************/
+
+ $('#enviar_btn').show();
+    $('#enviando').hide();
+    $('#enviado_ok').hide();
+    $('#alert_error').hide();
+    
+
+    $('#form-enviar').submit(function(event) {
+        console.log("click enviar form")
+        event.preventDefault();
+
+        $('#enviar_btn').hide('slow');
+        $('#enviando').show('slow');
+        $('#enviado_ok').hide('slow');
+
+        var formData = $(this).serializeArray();
+        console.log("formData: ", formData);
+        $.ajax({
+            url:'back/valida.php',
+            method:'POST',
+            data: formData,
+            success:function(data){
+                if(data=='ok'){
+                    $('#enviar_btn').show('slow');
+                    $('#enviado_ok').show('slow');
+                    $('#enviando').hide('slow');
+                    $('#alert_error').hide();
+                    $('#msg_error').empty();
+                }else{
+                    $('#alert_error').show('slow');
+                    $('#msg_error').html(data);
+                    $('#enviar_btn').show('slow');
+                    $('#enviando').hide('slow');                    
+                }
+            }
+        }); 
+
+    });
+
     </script>
-
 </body>
-
 </html>
