@@ -236,11 +236,11 @@ main {
 
 /* Slide 1 */
 
-#slide-1 .bcg {
+#home .bcg {
     background-image: url('../img/1.jpg')
 }
 
-#slide-1 .hsContainer {
+#home .hsContainer {
     position: relative;
     top: 2%;
     left: 0%;
@@ -251,7 +251,7 @@ main {
     width: 75px;
 }
 
-#slide-1 h2 {
+#home h2 {
     font-family: 'Conv_RemachineScript_Personal_Use';
     color: #ffffff;
     padding: 10px 5px;
@@ -265,11 +265,11 @@ main {
 
 /* Slide 2 */
 
-#slide-2 .bcg {
+#tuskids .bcg {
     background-image: url('../img/2.jpg')
 }
 
-#slide-2 .hsContent {}
+#tuskids .hsContent {}
 
 .flecha {
     padding: 25px 0px;
@@ -279,44 +279,44 @@ main {
     width: 50px;
 }
 
-#slide-2 .hsContainer {
+#tuskids .hsContainer {
     position: relative;
     left: 2%;
     padding-left: 10px;
     width: 80%;
 }
 
-#slide-2 h2 {
+#tuskids h2 {
     color: #ffffff;
     font-size: 1em;
     line-height: 1.7em;
 }
 
-#slide-2 h2 span {
+#tuskids h2 span {
     font-family: 'Conv_Flama-Ultralight';
 }
 
 
 /* Slide 3 */
 
-#slide-3 .bcg {
+#servicios .bcg {
     background-image: url('../img/3.jpg')
 }
 
-#slide-3 .hsContainer {
+#servicios .hsContainer {
     position: relative;
     left: 2%;
     padding-top: 0px;
     width: 100%;
 }
 
-#slide-3 h2 {
+#servicios h2 {
     color: #ffffff;
     font-family: 'Conv_Flama-Bold';
     font-size: 2.4em;
 }
 
-#slide-3 .row div.circulo {
+#servicios .row div.circulo {
     text-align: center;
     background-color: rgba(255, 255, 255, 0.7);
     border-radius: 50%;
@@ -326,31 +326,31 @@ main {
     font-size: 1.3em;
 }
 
-#slide-3 .row div p {
+#servicios .row div p {
     font-family: 'Conv_RemachineScript_Personal_Use';
     color: #ffffff;
     font-size: 1.9em;
     margin: 2px 0px;
 }
 
-#slide-3 .row div.circulo i {
+#servicios .row div.circulo i {
     display: block;
     color: #ffffff;
 }
 
-#slide-4 .hsContainer {
+#contacto .hsContainer {
     position: relative;
     left: 2%;
     padding-top: 5px;
     width: 99%;
 }
 
-#slide-3 .flecha,
-#slide-4 .flecha {
+#servicios .flecha,
+#contacto .flecha {
     padding: 15px 0px;
 }
 
-#slide-4 h2 {
+#contacto h2 {
     font-family: 'Conv_Flama-Bold';
     font-size: 2em;
     color: #fff;
@@ -360,12 +360,12 @@ main {
 
 /* Slide 4 */
 
-#slide-4 .bcg {
+#contacto .bcg {
     background-image: url('../img/4.jpg');
     background-position: center center;
 }
 
-#slide-4 h2 {
+#contacto h2 {
     padding-left: 0;
     padding-right: 0;
 }
@@ -388,25 +388,25 @@ main {
 
 /* Slide 5 */
 
-#slide-5 .bcg {
+#ubicacion .bcg {
     background-image: url('../img/5.jpg');
     background-position: center center;
 }
 
-#slide-5 .hsContainer {
+#ubicacion .hsContainer {
     position: relative;
     left: 2%;
     padding-top: 10px;
     width: 50%;
 }
 
-#slide-5 h2 {
+#ubicacion h2 {
     color: #ffffff;
     font-size: 1.6em;
     margin: 2px 0px;
 }
 
-#slide-5 p {
+#ubicacion p {
     color: #ffffff;
     font-size: 1em;
     margin-top: 2px;
@@ -560,7 +560,7 @@ main {
         text-align: left;
         padding: 0;
     }
-    #slide-1 h2 {
+    #home h2 {
         font-family: 'Conv_RemachineScript_Personal_Use';
         color: #fff8de;
         padding: 10px 5px;
@@ -570,7 +570,7 @@ main {
         font-weight: normal;
         text-shadow: 2px 2px 2px rgb(123, 117, 117);
     }
-    #slide-1 .hsContainer {
+    #home .hsContainer {
         position: relative;
         top: 5%;
         left: 20%;
@@ -585,7 +585,7 @@ main {
     .hsContent p {
         width: 400px;
     }
-    #slide-1 .hsContainer {
+    #home .hsContainer {
         position: relative;
         top: 5%;
         left: 20%;
@@ -593,33 +593,33 @@ main {
     .hsContainer img.flecha {
         width: 50px;
     }
-    #slide-2 .hsContent {
+    #tuskids .hsContent {
         top: auto;
     }
-    #slide-2 .hsContainer {
+    #tuskids .hsContainer {
         position: relative;
         left: 20%;
         padding-top: 126px;
         width: 50%;
     }
-    #slide-2 h2 {
+    #tuskids h2 {
         font-size: 1.8em;
         line-height: 1.5em;
     }
-    #slide-2 h2 span {
+    #tuskids h2 span {
         font-family: 'Conv_Flama-Ultralight';
     }
-    #slide-3 h2 {
+    #servicios h2 {
         font-family: 'Conv_Flama-Bold';
         font-size: 3em;
     }
-    #slide-3 .hsContainer {
+    #servicios .hsContainer {
         position: relative;
         left: 20%;
         padding-top: 16px;
         width: 50%;
     }
-    #slide-3 .row div.circulo {
+    #servicios .row div.circulo {
         text-align: center;
         background-color: rgba(255, 255, 255, 0.7);
         border-radius: 50%;
@@ -628,23 +628,23 @@ main {
         padding: 26px 5px;
         font-size: 1.6em;
     }
-    #slide-3 .row div p {
+    #servicios .row div p {
         font-family: 'Conv_RemachineScript_Personal_Use';
         color: #ffffff;
         font-size: 3em;
         margin: 8px 0px;
     }
-    #slide-3 .row div.circulo i {
+    #servicios .row div.circulo i {
         display: block;
         color: #ffffff;
     }
-    #slide-4 .hsContainer {
+    #contacto .hsContainer {
         position: relative;
         left: 20%;
         padding-top: 126px;
         width: 50%;
     }
-    #slide-4 h2 {
+    #contacto h2 {
         font-family: 'Conv_Flama-Bold';
         font-size: 3em;
         color: #fff;
@@ -652,18 +652,18 @@ main {
     .form-group {
         margin-bottom: 15px !important;
     }
-    #slide-5 .hsContainer {
+    #ubicacion .hsContainer {
         position: relative;
         left: 20%;
         padding-top: 126px;
         width: 50%;
     }
-    #slide-5 h2 {
+    #ubicacion h2 {
         color: #ffffff;
         font-size: 2em;
         margin: 2px 0px;
     }
-    #slide-5 p {
+    #ubicacion p {
         color: #ffffff;
         font-size: 1em;
         margin-top: 2px;
